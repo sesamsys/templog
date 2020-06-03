@@ -1,10 +1,28 @@
 #!/bin/sh
 
-rrdtool graph temp_graph.png \
--w 1024 -h 400 -a PNG --slope-mode \
+rrdtool graph /opt/templog/temp_hourly.png \
+-w 500 -h 300 --full-size-mode -a PNG --slope-mode \
 --start -1h --end -300s \
 --vertical-label "temperature (°C)" \
 --left-axis-format "%.1lf" \
 --title "Last hour \n" \
-DEF:temp=data/templog.rrd:temperature:AVERAGE \
+DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
+LINE2:temp#ff0000:"temperature"
+
+rrdtool graph /opt/templog/temp_daily.png \
+-w 500 -h 300 --full-size-mode -a PNG --slope-mode \
+--start -1d --end -300s \
+--vertical-label "temperature (°C)" \
+--left-axis-format "%.1lf" \
+--title "Last day \n" \
+DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
+LINE2:temp#ff0000:"temperature"
+
+rrdtool graph /opt/templog/temp_weekly.png \
+-w 1020 -h 300 --full-size-mode -a PNG --slope-mode \
+--start -1w --end -300s \
+--vertical-label "temperature (°C)" \
+--left-axis-format "%.1lf" \
+--title "Last week \n" \
+DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
