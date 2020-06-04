@@ -4,10 +4,10 @@ import os
 import time
 import rrdtool
 import Adafruit_DHT
+import logging
 
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
-
 
 def do_update():
     timestamp = time.time()
