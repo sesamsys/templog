@@ -7,6 +7,7 @@ rrdtool graph /opt/templog/temp_hourly.png \
 --left-axis-format "%.1lf" \
 --title "Last hour \n" \
 --no-legend \
+--zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
 
