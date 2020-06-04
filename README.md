@@ -3,7 +3,7 @@
 ## Hardware
 
 * Raspberry Pi 4 B
-* DHT22 temerature and humidity sensor
+* DHT22 temperature and humidity sensor
 
 ## Sources
 
