@@ -6,6 +6,7 @@ rrdtool graph /opt/templog/temp_hourly.png \
 --vertical-label "temperature (°C)" \
 --left-axis-format "%.1lf" \
 --title "Last hour \n" \
+--no-legend \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
 
@@ -15,6 +16,7 @@ rrdtool graph /opt/templog/temp_daily.png \
 --vertical-label "temperature (°C)" \
 --left-axis-format "%.1lf" \
 --title "Last day \n" \
+--no-legend \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
 
@@ -24,5 +26,6 @@ rrdtool graph /opt/templog/temp_weekly.png \
 --vertical-label "temperature (°C)" \
 --left-axis-format "%.1lf" \
 --title "Last week \n" \
+--no-legend \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
