@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rrdtool create /opt/templog/data/templog.rrd --step 300   \
+rrdtool create /opt/templog/data/templog_new.rrd --step 300   \
 DS:humidity:GAUGE:600:-55:125  \
 DS:temperature:GAUGE:600:-55:125  \
 RRA:AVERAGE:0.5:1:576    \
