@@ -4,7 +4,6 @@ import os
 import time
 import rrdtool
 import Adafruit_DHT
-import logging
 
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
@@ -21,7 +20,6 @@ def do_update():
                                         temperature))
             return
         except:
-            logging.exception("retry in %is because of: ", retry)
             time.sleep(retry * 1000)
 
 do_update()
