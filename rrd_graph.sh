@@ -18,6 +18,7 @@ rrdtool graph /opt/templog/temp_daily.png \
 --left-axis-format "%.1lf" \
 --title "Last day \n" \
 --no-legend \
+--zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
 
@@ -28,6 +29,7 @@ rrdtool graph /opt/templog/temp_weekly.png \
 --left-axis-format "%.1lf" \
 --title "Last week \n" \
 --no-legend \
+--zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature"
 
@@ -37,6 +39,7 @@ rrdtool graph /opt/templog/hum_hourly.png \
 --vertical-label "humidity (%)" \
 --title "Last hour \n" \
 --no-legend \
+--zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
 LINE2:hum#0000ff:"humidity"
 
@@ -46,6 +49,7 @@ rrdtool graph /opt/templog/hum_daily.png \
 --vertical-label "humidity (%)" \
 --title "Last day \n" \
 --no-legend \
+--zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
 LINE2:hum#0000ff:"humidity"
 
@@ -55,5 +59,6 @@ rrdtool graph /opt/templog/hum_weekly.png \
 --vertical-label "humidity (%)" \
 --title "Last week \n" \
 --no-legend \
+--zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
 LINE2:hum#0000ff:"humidity"
