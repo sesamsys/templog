@@ -7,7 +7,7 @@ rrdtool graph /opt/templog/temp_hourly.png \
 --title "Last hour \n" \
 --zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
-LINE2:temp#ff0000:"temperature" \
+LINE2:temp#ff0000:"Temperature" \
 VDEF:tcur=temp,LAST \
 VDEF:tavg=temp,AVERAGE \
 VDEF:tmax=temp,MAXIMUM \
@@ -22,7 +22,7 @@ rrdtool graph /opt/templog/temp_daily.png \
 --title "Last day \n" \
 --zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
-LINE2:temp#ff0000:"temperature" \
+LINE2:temp#ff0000:"Temperature" \
 VDEF:tcur=temp,LAST \
 VDEF:tavg=temp,AVERAGE \
 VDEF:tmax=temp,MAXIMUM \
@@ -37,7 +37,7 @@ rrdtool graph /opt/templog/temp_weekly.png \
 --title "Last week \n" \
 --zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
-LINE2:temp#ff0000:"temperature" \
+LINE2:temp#ff0000:"Temperature" \
 VDEF:tcur=temp,LAST \
 VDEF:tavg=temp,AVERAGE \
 VDEF:tmax=temp,MAXIMUM \
@@ -51,7 +51,7 @@ rrdtool graph /opt/templog/hum_hourly.png \
 --title "Last hour \n" \
 --zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
-LINE2:hum#0000ff:"humidity" \
+LINE2:hum#0000ff:"Humidity" \
 VDEF:hcur=hum,LAST \
 VDEF:havg=hum,AVERAGE \
 VDEF:hmax=hum,MAXIMUM \
@@ -65,7 +65,7 @@ rrdtool graph /opt/templog/hum_daily.png \
 --title "Last day \n" \
 --zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
-LINE2:hum#0000ff:"humidity" \
+LINE2:hum#0000ff:"Humidity" \
 VDEF:hcur=hum,LAST \
 VDEF:havg=hum,AVERAGE \
 VDEF:hmax=hum,MAXIMUM \
@@ -79,7 +79,7 @@ rrdtool graph /opt/templog/hum_weekly.png \
 --title "Last week \n" \
 --zoom=2 \
 DEF:hum=/opt/templog/data/templog.rrd:humidity:AVERAGE \
-LINE2:hum#0000ff:"humidity" \
+LINE2:hum#0000ff:"Humidity" \
 VDEF:hcur=hum,LAST \
 VDEF:havg=hum,AVERAGE \
 VDEF:hmax=hum,MAXIMUM \
