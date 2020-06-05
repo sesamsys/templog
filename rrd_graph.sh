@@ -10,9 +10,9 @@ rrdtool graph /opt/templog/temp_hourly.png \
 --zoom=2 \
 DEF:temp=/opt/templog/data/templog.rrd:temperature:AVERAGE \
 LINE2:temp#ff0000:"temperature" \
-GPRINT:temp:LAST:Cur\:%3.2lf \
-GPRINT:temp:AVERAGE:Avg\: %3.2lf \
-GPRINT:temp:MAX:Max\:%3.2lf
+GPRINT:temp:LAST:Cur:%2.2lf \
+GPRINT:temp:AVERAGE:Avg: %3.2lf \
+GPRINT:temp:MAX:Max:%3.2lf
 
 rrdtool graph /opt/templog/temp_daily.png \
 -w 500 -h 300 --full-size-mode -a PNG --slope-mode \
