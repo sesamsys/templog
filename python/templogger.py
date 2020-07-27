@@ -3,14 +3,15 @@
 import os
 import time
 import rrdtool
-import Adafruit_DHT
+import board
+import adafruit_dht
 
-DHT_SENSOR = Adafruit_DHT.DHT22
-DHT_PIN = 4
+dhtDevice = adafruit_dht.DHT22(board.D4)
 
 def do_update():
     timestamp = time.time()
-    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+    temperature = dhtDevice.temperature
+    humidity = dhtDevice.humidity
 # in case of error, retry after 5 seconds
     for retry in (5, 1):
         try:

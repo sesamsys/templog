@@ -20,12 +20,17 @@
 # SOFTWARE.
 
 import datetime
-import Adafruit_DHT
+import board
+import adafruit_dht
 import os
 from influxdb import client as influxdb
 
+# Initial the dht device, with data pin connected to:
+dhtDevice = adafruit_dht.DHT22(board.D4)
+
 #Read Data From DHT22 Sensor
-humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 4)
+temperature = dhtDevice.temperature
+humidity = dhtDevice.humidity
 
 #InfluxDB Connection Details
 influxHost = 'localhost'
