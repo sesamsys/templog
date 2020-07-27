@@ -16,3 +16,4 @@ Currently running InfluxDB with Grafana on Raspbian.
 * [RRDtool](https://oss.oetiker.ch/rrdtool/index.en.html)
 * [Hero Patterns](https://www.heropatterns.com) x x x x
 * [Temperature monitor using DHT22 + Grafana + InfluxDB (and a PI) – Part 2](https://blog.stijn-dhaese.be/2019/11/temperature-monitor-using-dht22-+-grafana-+-influxdb-(and-a-pi)---part-2/)
+* [CircuitPython-DHT Library](https://learn.adafruit.com/dht-humidity-sensing-on-raspberry-pi-with-gdocs-logging/python-setup)
