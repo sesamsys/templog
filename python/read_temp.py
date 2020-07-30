@@ -27,7 +27,7 @@ import os
 from influxdb import client as influxdb
 
 # Initial the dht device, with data pin connected to:
-dhtDevice = adafruit_dht.DHT22(board.D4)
+dhtDevice = adafruit_dht.DHT22(board.D17)
 
 #Read Data From DHT22 Sensor
 try:
