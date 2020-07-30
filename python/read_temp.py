@@ -30,12 +30,11 @@ from influxdb import client as influxdb
 dhtDevice = adafruit_dht.DHT22(board.D4)
 
 #Read Data From DHT22 Sensor
-for retry in (5, 1):
-    try:
-        temperature = dhtDevice.temperature
-        humidity = dhtDevice.humidity
-    except:
-        time.sleep(retry * 1000)     
+try:
+    temperature = dhtDevice.temperature
+    humidity = dhtDevice.humidity
+except RuntimeError as error:
+    print(error.args[0])
 
 #InfluxDB Connection Details
 influxHost = 'localhost'
