@@ -3,3 +3,4 @@ temp_*
 hum_*
 python/secretstring
 false
+.DS_Store
